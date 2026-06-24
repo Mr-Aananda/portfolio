@@ -1,24 +1,396 @@
-/* Import main SCSS file */
-/* @import '../scss/app.scss'; */
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --font-sans: "Inter", "Figtree", var(--font-sans);
+  --font-mono: "JetBrains Mono", var(--font-mono);
 
-/* Custom frontend styles */
-.hero-gradient {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+
+  --color-accent-400: #c084fc;
+  --color-accent-500: #a855f7;
+  --color-accent-600: #9333ea;
+
+  --breakpoint-xs: 375px;
+
+  --backdrop-blur-xs: 2px;
+
+  --shadow-glow-brand: 0 0 20px rgba(99,102,241,0.4);
+  --shadow-glow-accent: 0 0 20px rgba(168,85,247,0.4);
+  --shadow-glow-sm: 0 0 10px rgba(99,102,241,0.25);
+  --shadow-card: 0 4px 24px rgba(15,23,42,0.08);
+  --shadow-card-hover: 0 16px 48px rgba(15,23,42,0.16);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 8s ease-in-out infinite;
+  --animate-float-delayed: float 6s ease-in-out 2s infinite;
+  --animate-fade-in: fadeIn 0.6s ease-out forwards;
+  --animate-fade-in-up: fadeInUp 0.7s ease-out forwards;
+  --animate-slide-in-left: slideInLeft 0.6s ease-out forwards;
+  --animate-slide-in-right: slideInRight 0.6s ease-out forwards;
+  --animate-pulse-glow: pulseGlow 2s ease-in-out infinite;
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-bounce-slow: bounce 3s infinite;
+  --animate-typewriter: typewriter 2s steps(25,end) forwards;
+  --animate-blink-cursor: blinkCursor 0.75s step-end infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-14px); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(99,102,241,0.4); }
+    50% { box-shadow: 0 0 20px 8px rgba(99,102,241,0.15); }
+  }
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  @keyframes blinkCursor {
+    from, to { border-color: transparent; }
+    50% { border-color: #6366f1; }
+  }
 }
 
-.card-hover {
-    transition: all 0.3s ease;
+@plugin "@tailwindcss/forms";
+
+/* =========================================================
+   CSS Custom Properties — Design Tokens
+   ========================================================= */
+:root {
+    --color-brand:      #6366f1;
+    --color-brand-dark: #4f46e5;
+    --color-accent:     #a855f7;
+    --color-success:    #10b981;
+    --color-bg:         #f8fafc;
+    --color-surface:    #ffffff;
+    --color-dark:       #0f172a;
+    --color-dark-2:     #1e293b;
+    --color-muted:      #64748b;
+    --radius-card:      1rem;
+    --transition-base:  all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-card:      0 4px 24px rgba(15,23,42,0.08);
+    --shadow-hover:     0 16px 48px rgba(15,23,42,0.16);
+    --shadow-glow:      0 0 20px rgba(99,102,241,0.35);
 }
 
-.card-hover:hover {
-    transform: translateY(-5px);
+html {
+    scroll-behavior: smooth;
 }
 
-/* Mobile menu animations */
+body {
+    background-color: var(--color-bg);
+    color: var(--color-dark);
+    font-family: 'Inter', 'Figtree', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #6366f1, #a855f7);
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #4f46e5, #9333ea);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove tap highlight on mobile */
+a, button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   Utilities / Custom Classes
+   ========================================================= */
+
+/* Gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.gradient-text-blue {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.glass-dark {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Premium card */
+.card-premium {
+    background: #ffffff;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(226,232,240,0.8);
+    transition: var(--transition-base);
+}
+.card-premium:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+    border-color: rgba(99,102,241,0.2);
+}
+
+/* Glow effects */
+.glow-brand {
+    box-shadow: 0 0 20px rgba(99,102,241,0.35), 0 0 60px rgba(99,102,241,0.1);
+}
+.glow-accent {
+    box-shadow: 0 0 20px rgba(168,85,247,0.35), 0 0 60px rgba(168,85,247,0.1);
+}
+
+/* Section badge */
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 1rem;
+    background: rgba(99,102,241,0.1);
+    border: 1px solid rgba(99,102,241,0.25);
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #6366f1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Section header underline */
+.section-line {
+    width: 4rem;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    border-radius: 9999px;
+    margin: 0.75rem auto 0;
+}
+.section-line-left {
+    margin-left: 0;
+}
+
+/* Animated gradient background */
+.bg-gradient-animate {
+    background: linear-gradient(-45deg, #0f172a, #1e1b4b, #1e293b, #0c1445);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+}
+
+/* Hover lift */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Skill bar */
+.skill-bar {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+.skill-bar-fill {
+    height: 100%;
+    border-radius: 9999px;
+    width: 0;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mobile nav overlay */
+.mobile-nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15,23,42,0.5);
+    backdrop-filter: blur(4px);
+    z-index: 40;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.mobile-nav-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Typewriter */
+.typewriter-text {
+    overflow: hidden;
+    border-right: 3px solid #6366f1;
+    white-space: nowrap;
+    animation:
+        typewriterAnim 2.5s steps(30, end) 0.5s both,
+        blinkCursorAnim 0.75s step-end infinite;
+}
+
+/* Float badges */
+.float-badge {
+    animation: floatAnim 5s ease-in-out infinite;
+}
+.float-badge-delay {
+    animation: floatAnim 5s ease-in-out 1.5s infinite;
+}
+
+/* Reveal animation (used with IntersectionObserver) */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-left.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Stagger delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* =========================================================
+   Keyframes (Additional / Fallbacks)
+   ========================================================= */
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-14px); }
+}
+
+@keyframes typewriterAnim {
+    from { width: 0; }
+    to   { width: 100%; }
+}
+
+@keyframes blinkCursorAnim {
+    from, to { border-color: transparent; }
+    50%      { border-color: #6366f1; }
+}
+
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+/* =========================================================
+   Component Overrides
+   ========================================================= */
+
+/* Mobile menu transition */
 .mobile-menu {
-    transition: all 0.3s ease-in-out;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease;
+    overflow: hidden;
+}
+.mobile-menu.hidden {
+    max-height: 0;
+    opacity: 0;
+}
+.mobile-menu:not(.hidden) {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* Progress bar shimmer */
+.progress-shimmer {
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.3) 50%,
+        rgba(255,255,255,0) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* Selection color */
+::selection {
+    background: rgba(99,102,241,0.25);
+    color: #1e1b4b;
 }

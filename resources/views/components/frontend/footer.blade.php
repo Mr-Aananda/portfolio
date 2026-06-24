@@ -1,138 +1,165 @@
-<footer class="bg-gray-900 text-white relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <!-- Main Footer Content -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
-            <!-- Brand Section - Enhanced -->
-            <div class="md:col-span-2 lg:col-span-2">
-                <div class="flex flex-col sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 mb-4">
-                    <div
-                        class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg overflow-hidden relative flex-shrink-0">
+{{-- Footer --}}
+<footer class="relative text-white overflow-hidden"
+        style="background: linear-gradient(135deg, #0a0f1e 0%, #0f172a 50%, #0a0f1e 100%);">
+
+    {{-- Decorative orbs --}}
+    <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div class="absolute bottom-0 left-1/4 w-64 h-64 bg-brand-600/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-0 right-1/4 w-56 h-56 bg-accent-500/8 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-8 relative z-10">
+
+        {{-- Main Grid --}}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
+
+            {{-- Brand --}}
+            <div class="sm:col-span-2 lg:col-span-2">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-11 h-11 rounded-xl overflow-hidden bg-gradient-to-br from-brand-500 to-accent-500 flex-shrink-0 relative">
                         <img src="{{ Vite::asset('resources/assets/icons/icon.png') }}" alt="MR. Aananda"
                             class="w-full h-full object-cover absolute inset-0"
-                            onerror="this.style.display='none'; document.getElementById('fallbackAA').style.display='flex';">
-                        <span id="fallbackAA" class="text-white font-bold text-lg" style="display: none;">MR</span>
+                            onerror="this.style.display='none'; document.getElementById('footer-logo-fallback').style.display='flex';">
+                        <span id="footer-logo-fallback" class="hidden w-full h-full items-center justify-center">
+                            <span class="text-white font-bold text-sm">MA</span>
+                        </span>
                     </div>
-                    <div class="flex-1">
-                        <h3
-                            class="text-xl sm:text-2xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                            MR. Aananda
-                        </h3>
-                        <p class="text-gray-300 text-base sm:text-lg mb-3 font-medium">Full Stack Web Developer</p>
-                        <p class="text-gray-400 leading-relaxed text-sm sm:text-base max-w-md">
-                            Transforming ideas into exceptional digital experiences. Specializing in modern web
-                            technologies,
-                            clean architecture, and user-centric solutions.
-                        </p>
+                    <div>
+                        <span class="block font-bold text-lg gradient-text leading-tight">Mahmudur Rahman Ananda</span>
+                        <span class="text-slate-400 text-xs font-medium">Full Stack Web Developer</span>
                     </div>
                 </div>
-            </div>
+                <p class="text-slate-400 text-sm leading-relaxed max-w-sm mb-5">
+                    Transforming ideas into exceptional digital experiences. Specializing in modern web technologies,
+                    clean architecture, and user-centric solutions.
+                </p>
 
-            <!-- Quick Links - Enhanced -->
-            <div class="mt-4 sm:mt-0">
-                <h4 class="text-sm sm:text-base font-semibold mb-3 sm:mb-4 text-gray-200 uppercase tracking-wider">Quick Links</h4>
-                <div class="grid grid-cols-2 gap-2 sm:gap-3">
-                    <a href="{{ route('home') }}"
-                        class="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-xs sm:text-sm py-1.5 hover:translate-x-1 transform transition-transform">
-                        Home
-                    </a>
-                    <a href="{{ route('about') }}"
-                        class="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-xs sm:text-sm py-1.5 hover:translate-x-1 transform transition-transform">
-                        About
-                    </a>
-                    <a href="{{ route('skills') }}"
-                        class="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-xs sm:text-sm py-1.5 hover:translate-x-1 transform transition-transform">
-                        Skills
-                    </a>
-                    <a href="{{ route('projects') }}"
-                        class="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-xs sm:text-sm py-1.5 hover:translate-x-1 transform transition-transform">
-                        Projects
-                    </a>
-                    <a href="{{ route('blogs') }}"
-                        class="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-xs sm:text-sm py-1.5 hover:translate-x-1 transform transition-transform">
-                        Blogs
-                    </a>
-                    <a href="{{ route('contact') }}"
-                        class="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-xs sm:text-sm py-1.5 hover:translate-x-1 transform transition-transform">
-                        Contact
-                    </a>
-                </div>
-            </div>
-
-            <!-- Connect - Enhanced -->
-            <div class="mt-4 sm:mt-0">
-                <h4 class="text-sm sm:text-base font-semibold mb-3 sm:mb-4 text-gray-200 uppercase tracking-wider">Connect With Me</h4>
-                <div class="flex space-x-2 sm:space-x-3 mb-4">
+                {{-- Social icons --}}
+                <div class="flex items-center gap-2.5">
                     <a href="https://github.com/Mr-Aananda" target="_blank"
-                        class="bg-gray-800 text-gray-300 p-2 sm:p-3 rounded-xl hover:bg-gray-700 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-md flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12">
-                        <i class="fab fa-github text-sm sm:text-base"></i>
+                       class="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center
+                              text-slate-400 hover:bg-slate-700 hover:text-white hover:border-slate-600
+                              transition-all duration-300 hover:-translate-y-0.5"
+                       title="GitHub">
+                        <i class="fab fa-github text-sm"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/mr-aananda/" target="_blank"
-                        class="bg-gray-800 text-gray-300 p-2 sm:p-3 rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-md flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12">
-                        <i class="fab fa-linkedin-in text-sm sm:text-base"></i>
+                       class="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center
+                              text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-600
+                              transition-all duration-300 hover:-translate-y-0.5"
+                       title="LinkedIn">
+                        <i class="fab fa-linkedin-in text-sm"></i>
                     </a>
                     <a href="https://wa.me/8801971072007" target="_blank"
-                        class="bg-gray-800 text-gray-300 p-2 sm:p-3 rounded-xl hover:bg-green-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-md flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12">
-                        <i class="fab fa-whatsapp text-sm sm:text-base"></i>
+                       class="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center
+                              text-slate-400 hover:bg-green-500 hover:text-white hover:border-green-500
+                              transition-all duration-300 hover:-translate-y-0.5"
+                       title="WhatsApp">
+                        <i class="fab fa-whatsapp text-sm"></i>
                     </a>
                 </div>
+            </div>
 
-                <!-- Tech Stack -->
-                <div class="bg-gray-800/50 rounded-lg p-3">
-                    <p class="text-xs sm:text-sm text-gray-300 flex items-center space-x-2">
-                        <i class="fas fa-code text-blue-400 text-sm sm:text-base"></i>
-                        <span>Built with Laravel & Tailwind CSS</span>
-                    </p>
-                </div>
+            {{-- Quick Links --}}
+            <div>
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+                <ul class="space-y-2.5">
+                    @foreach([['home', 'Home'], ['about', 'About'], ['skills', 'Skills'], ['projects', 'Projects'], ['blogs', 'Blogs'], ['contact', 'Contact']] as [$route, $label])
+                        <li>
+                            <a href="{{ route($route) }}"
+                               class="text-slate-400 hover:text-brand-400 text-sm transition-colors duration-200
+                                      flex items-center gap-2 group">
+                                <i class="fas fa-chevron-right text-[10px] text-brand-500/50 group-hover:text-brand-400 transition-colors"></i>
+                                {{ $label }}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+
+            {{-- Get In Touch --}}
+            <div>
+                <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Get In Touch</h4>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="mailto:rmananda007@gmail.com"
+                           class="text-slate-400 hover:text-brand-400 text-sm transition-colors duration-200 flex items-start gap-2">
+                            <i class="fas fa-envelope text-brand-500/70 mt-0.5 text-xs flex-shrink-0"></i>
+                            <span class="break-all">rmananda007@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+8801971072007"
+                           class="text-slate-400 hover:text-brand-400 text-sm transition-colors duration-200 flex items-center gap-2">
+                            <i class="fas fa-phone text-brand-500/70 text-xs flex-shrink-0"></i>
+                            +880 1971 072007
+                        </a>
+                    </li>
+                    <li class="flex items-center gap-2 text-sm text-slate-400">
+                        <i class="fas fa-map-marker-alt text-brand-500/70 text-xs flex-shrink-0"></i>
+                        Tongi, Gazipur, Dhaka
+                    </li>
+                    <li class="mt-4">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            Available for Work
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
 
-        <!-- Bottom Bar - Enhanced -->
-        <div class="border-t border-gray-700 pt-4 sm:pt-6">
-            <div class="flex flex-col lg:flex-row justify-between items-center space-y-3 sm:space-y-4 lg:space-y-0">
-                <p class="text-gray-400 text-xs sm:text-sm text-center lg:text-left">
-                    &copy; {{ date('Y') }} <span class="text-white font-semibold">MR. Aananda</span>. All rights
-                    reserved.
-                </p>
-                <div class="flex items-center space-x-4 sm:space-x-6 text-gray-400 text-xs sm:text-sm">
-                    <a href="#" class="hover:text-blue-400 transition-colors duration-300">Privacy</a>
-                    <a href="#" class="hover:text-blue-400 transition-colors duration-300">Terms</a>
-                    <a href="#" class="hover:text-blue-400 transition-colors duration-300">Sitemap</a>
-                </div>
+        {{-- Divider --}}
+        <div class="h-px bg-gradient-to-r from-transparent via-brand-500/30 to-transparent mb-6"></div>
+
+        {{-- Bottom Bar --}}
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-slate-500 text-xs sm:text-sm text-center sm:text-left order-2 sm:order-1">
+                            &copy; {{ date('Y') }} <span class="text-white font-semibold">Mahmudur Rahman Ananda</span>. All rights reserved.
+                Built with <span class="text-red-400">♥</span> using Laravel & Tailwind CSS.
+            </p>
+            <div class="flex items-center gap-4 text-slate-500 text-xs order-1 sm:order-2">
+                <a href="{{ route('privacy') }}" class="hover:text-brand-400 transition-colors duration-200">Privacy</a>
+                <span class="text-slate-700">·</span>
+                <a href="{{ route('terms') }}" class="hover:text-brand-400 transition-colors duration-200">Terms</a>
+                <span class="text-slate-700">·</span>
+                <a href="{{ route('sitemap') }}" class="hover:text-brand-400 transition-colors duration-200">Sitemap</a>
             </div>
         </div>
     </div>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTop"
-        class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center z-50 opacity-0 invisible transition-opacity duration-300">
-        <i class="fas fa-chevron-up text-sm sm:text-base"></i>
+    {{-- Scroll to Top --}}
+    <button id="scroll-to-top"
+        class="fixed bottom-5 right-5 sm:bottom-7 sm:right-7
+               w-10 h-10 sm:w-11 sm:h-11
+               bg-gradient-to-br from-brand-500 to-accent-600 text-white
+               rounded-xl shadow-lg hover:shadow-glow-brand
+               flex items-center justify-center z-50
+               opacity-0 invisible scale-90
+               transition-all duration-300"
+        aria-label="Scroll to top">
+        <i class="fas fa-chevron-up text-sm"></i>
     </button>
 </footer>
 
 @push('scripts')
-    <script>
-        // Scroll to Top Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const scrollToTopBtn = document.getElementById('scrollToTop');
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const scrollBtn = document.getElementById('scroll-to-top');
 
-            // Show/hide button based on scroll position
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 300) {
-                    scrollToTopBtn.classList.remove('opacity-0', 'invisible');
-                    scrollToTopBtn.classList.add('opacity-100', 'visible');
-                } else {
-                    scrollToTopBtn.classList.remove('opacity-100', 'visible');
-                    scrollToTopBtn.classList.add('opacity-0', 'invisible');
-                }
-            });
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 400) {
+                scrollBtn.classList.remove('opacity-0', 'invisible', 'scale-90');
+                scrollBtn.classList.add('opacity-100', 'visible', 'scale-100');
+            } else {
+                scrollBtn.classList.add('opacity-0', 'invisible', 'scale-90');
+                scrollBtn.classList.remove('opacity-100', 'visible', 'scale-100');
+            }
+        }, { passive: true });
 
-            // Scroll to top when clicked
-            scrollToTopBtn.addEventListener('click', function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
+        scrollBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-    </script>
+    });
+</script>
 @endpush

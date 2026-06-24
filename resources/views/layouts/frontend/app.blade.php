@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MR. Aananda — Full Stack Web Developer specializing in Laravel, Vue.js, and modern web technologies. Building scalable, user-centric digital experiences.">
+    <meta name="keywords" content="Full Stack Developer, Laravel, Vue.js, PHP, Web Developer, Bangladesh, Portfolio">
+    <meta name="author" content="Mahmudur Rahman Ananda">
+    <meta property="og:title" content="MR. Aananda - Full Stack Web Developer">
+    <meta property="og:description" content="Building exceptional digital experiences with modern technologies.">
+    <meta property="og:type" content="website">
     <title>@yield('title', 'MR. Aananda - Full Stack Web Developer')</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700&display=swap" rel="stylesheet" />
-
-     <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ Vite::asset('resources/assets/icons/icon.png') }}">
 
-    <!-- Additional Fonts for Professional Look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Fonts: Inter + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Vite Assets (CSS + JS) -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
     @stack('styles')
 </head>
-<body class="bg-gray-50 font-sans antialiased">
+<body class="bg-slate-50 font-sans antialiased text-slate-900">
+
     <!-- Navigation -->
     <x-frontend.navigation />
 
@@ -33,7 +40,64 @@
     <!-- Footer -->
     <x-frontend.footer />
 
-    <!-- Scripts -->
+    <!-- Global Reveal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Intersection Observer for scroll reveal animations
+            const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('revealed');
+                        }, (entry.target.dataset.delay || 0));
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // Skill bar animation
+            const skillBars = document.querySelectorAll('[data-percentage]');
+            const skillObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bar = entry.target;
+                        const percentage = bar.getAttribute('data-percentage');
+                        setTimeout(() => { bar.style.width = percentage + '%'; }, 300);
+                        skillObserver.unobserve(bar);
+                    }
+                });
+            }, { threshold: 0.4 });
+            skillBars.forEach(bar => skillObserver.observe(bar));
+
+            // Animated counter
+            const counters = document.querySelectorAll('[data-count]');
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const target = parseInt(el.getAttribute('data-count'));
+                        const duration = 1500;
+                        const step = target / (duration / 16);
+                        let current = 0;
+                        const timer = setInterval(() => {
+                            current += step;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                            }
+                            el.textContent = Math.floor(current) + '+';
+                        }, 16);
+                        counterObserver.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(counter => counterObserver.observe(counter));
+        });
+    </script>
+
     @stack('scripts')
 </body>
 </html>
