@@ -101,6 +101,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 body {
@@ -110,6 +112,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 /* Custom scrollbar */
@@ -300,21 +304,36 @@ a, button {
 }
 .reveal-left {
     opacity: 0;
-    transform: translateX(-40px);
+    transform: translateY(30px);
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .reveal-left.revealed {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 .reveal-right {
     opacity: 0;
-    transform: translateX(40px);
+    transform: translateY(30px);
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .reveal-right.revealed {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+    .reveal-left {
+        transform: translateX(-40px);
+    }
+    .reveal-left.revealed {
+        transform: translateX(0);
+    }
+    .reveal-right {
+        transform: translateX(40px);
+    }
+    .reveal-right.revealed {
+        transform: translateX(0);
+    }
 }
 
 /* Stagger delays */

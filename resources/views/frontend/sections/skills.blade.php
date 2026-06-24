@@ -35,7 +35,7 @@
                     <p class="text-slate-400 text-sm">Modern web technologies & frameworks</p>
                 </div>
 
-                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 space-y-2">
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-3 sm:p-6 space-y-2">
                     <x-frontend.skill-item name="Laravel & PHP"                  percentage="95" icon="fab fa-laravel"   color="from-red-500 to-pink-600" />
                     <x-frontend.skill-item name="Vue.js, JavaScript & Nuxt.js"   percentage="92" icon="fab fa-vuejs"    color="from-emerald-500 to-green-600" />
                     <x-frontend.skill-item name="Alpine.js, Inertia & React"     percentage="75" icon="fab fa-react"    color="from-sky-500 to-blue-600" />
@@ -54,17 +54,17 @@
                     <p class="text-slate-400 text-sm">Core competencies for team collaboration</p>
                 </div>
 
-                <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     {{-- Communication --}}
-                    <div class="group p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10
+                    <div class="group p-3 sm:p-5 rounded-2xl bg-white/5 border border-white/10
                                 hover:bg-brand-500/10 hover:border-brand-500/30
                                 transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600
                                     flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-comments text-white text-lg"></i>
+                            <i class="fas fa-comments text-white text-base sm:text-lg"></i>
                         </div>
-                        <h4 class="font-semibold text-white text-sm mb-1">Communication</h4>
-                        <p class="text-slate-400 text-xs mb-3 leading-relaxed">Clear team collaboration</p>
+                        <h4 class="font-semibold text-white text-xs sm:text-sm mb-1">Communication</h4>
+                        <p class="text-slate-400 text-[10px] sm:text-xs mb-3 leading-relaxed">Clear team collaboration</p>
                         <div class="w-full bg-white/10 rounded-full h-1.5">
                             <div class="bg-gradient-to-r from-blue-500 to-blue-400 h-1.5 rounded-full" style="width: 95%"></div>
                         </div>
@@ -72,15 +72,15 @@
                     </div>
 
                     {{-- Team Leadership --}}
-                    <div class="group p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10
+                    <div class="group p-3 sm:p-5 rounded-2xl bg-white/5 border border-white/10
                                 hover:bg-emerald-500/10 hover:border-emerald-500/30
                                 transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600
                                     flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-users text-white text-lg"></i>
+                            <i class="fas fa-users text-white text-base sm:text-lg"></i>
                         </div>
-                        <h4 class="font-semibold text-white text-sm mb-1">Team Leadership</h4>
-                        <p class="text-slate-400 text-xs mb-3 leading-relaxed">Guiding teams to success</p>
+                        <h4 class="font-semibold text-white text-xs sm:text-sm mb-1">Team Leadership</h4>
+                        <p class="text-slate-400 text-[10px] sm:text-xs mb-3 leading-relaxed">Guiding teams to success</p>
                         <div class="w-full bg-white/10 rounded-full h-1.5">
                             <div class="bg-gradient-to-r from-emerald-500 to-green-400 h-1.5 rounded-full" style="width: 85%"></div>
                         </div>
@@ -88,15 +88,15 @@
                     </div>
 
                     {{-- Problem Solving --}}
-                    <div class="group p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10
+                    <div class="group p-3 sm:p-5 rounded-2xl bg-white/5 border border-white/10
                                 hover:bg-purple-500/10 hover:border-purple-500/30
                                 transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600
                                     flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-lightbulb text-white text-lg"></i>
+                            <i class="fas fa-lightbulb text-white text-base sm:text-lg"></i>
                         </div>
-                        <h4 class="font-semibold text-white text-sm mb-1">Problem Solving</h4>
-                        <p class="text-slate-400 text-xs mb-3 leading-relaxed">Innovative solutions</p>
+                        <h4 class="font-semibold text-white text-xs sm:text-sm mb-1">Problem Solving</h4>
+                        <p class="text-slate-400 text-[10px] sm:text-xs mb-3 leading-relaxed">Innovative solutions</p>
                         <div class="w-full bg-white/10 rounded-full h-1.5">
                             <div class="bg-gradient-to-r from-purple-500 to-violet-400 h-1.5 rounded-full" style="width: 92%"></div>
                         </div>
@@ -104,15 +104,15 @@
                     </div>
 
                     {{-- Project Management --}}
-                    <div class="group p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10
+                    <div class="group p-3 sm:p-5 rounded-2xl bg-white/5 border border-white/10
                                 hover:bg-orange-500/10 hover:border-orange-500/30
                                 transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600
                                     flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-project-diagram text-white text-lg"></i>
+                            <i class="fas fa-project-diagram text-white text-base sm:text-lg"></i>
                         </div>
-                        <h4 class="font-semibold text-white text-sm mb-1">Project Management</h4>
-                        <p class="text-slate-400 text-xs mb-3 leading-relaxed">Agile delivery</p>
+                        <h4 class="font-semibold text-white text-xs sm:text-sm mb-1">Project Management</h4>
+                        <p class="text-slate-400 text-[10px] sm:text-xs mb-3 leading-relaxed">Agile delivery</p>
                         <div class="w-full bg-white/10 rounded-full h-1.5">
                             <div class="bg-gradient-to-r from-orange-500 to-amber-400 h-1.5 rounded-full" style="width: 80%"></div>
                         </div>
@@ -120,15 +120,15 @@
                     </div>
 
                     {{-- Time Management --}}
-                    <div class="group p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10
+                    <div class="group p-3 sm:p-5 rounded-2xl bg-white/5 border border-white/10
                                 hover:bg-cyan-500/10 hover:border-cyan-500/30
                                 transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-sky-600
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-sky-600
                                     flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-clock text-white text-lg"></i>
+                            <i class="fas fa-clock text-white text-base sm:text-lg"></i>
                         </div>
-                        <h4 class="font-semibold text-white text-sm mb-1">Time Management</h4>
-                        <p class="text-slate-400 text-xs mb-3 leading-relaxed">Efficient task delivery</p>
+                        <h4 class="font-semibold text-white text-xs sm:text-sm mb-1">Time Management</h4>
+                        <p class="text-slate-400 text-[10px] sm:text-xs mb-3 leading-relaxed">Efficient task delivery</p>
                         <div class="w-full bg-white/10 rounded-full h-1.5">
                             <div class="bg-gradient-to-r from-cyan-500 to-sky-400 h-1.5 rounded-full" style="width: 90%"></div>
                         </div>
@@ -136,15 +136,15 @@
                     </div>
 
                     {{-- Adaptability --}}
-                    <div class="group p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10
+                    <div class="group p-3 sm:p-5 rounded-2xl bg-white/5 border border-white/10
                                 hover:bg-pink-500/10 hover:border-pink-500/30
                                 transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600
                                     flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-sync-alt text-white text-lg"></i>
+                            <i class="fas fa-sync-alt text-white text-base sm:text-lg"></i>
                         </div>
-                        <h4 class="font-semibold text-white text-sm mb-1">Adaptability</h4>
-                        <p class="text-slate-400 text-xs mb-3 leading-relaxed">Quick learning & flexibility</p>
+                        <h4 class="font-semibold text-white text-xs sm:text-sm mb-1">Adaptability</h4>
+                        <p class="text-slate-400 text-[10px] sm:text-xs mb-3 leading-relaxed">Quick learning & flexibility</p>
                         <div class="w-full bg-white/10 rounded-full h-1.5">
                             <div class="bg-gradient-to-r from-pink-500 to-rose-400 h-1.5 rounded-full" style="width: 87%"></div>
                         </div>
