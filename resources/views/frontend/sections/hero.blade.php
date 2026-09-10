@@ -126,10 +126,15 @@
                     <div class="relative w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80
                                 rounded-full overflow-hidden
                                 border-4 border-white/20 shadow-2xl animate-float-slow">
-                        <img src="{{ Vite::asset('resources/assets/images/hero.png') }}"
-                             alt="MR. Aananda — Software Engineer (Backend-Focused)"
-                             class="w-full h-full object-cover"
-                             onerror="this.style.display='none'; document.getElementById('hero-fallback').style.display='flex';">
+                        <picture>
+                            <source srcset="{{ Vite::asset('resources/assets/images/hero.webp') }}" type="image/webp">
+                            <img src="{{ Vite::asset('resources/assets/images/hero.png') }}"
+                                 alt="MR. Aananda — Software Engineer (Backend-Focused)"
+                                 class="w-full h-full object-cover"
+                                 loading="eager"
+                                 fetchpriority="high"
+                                 onerror="this.style.display='none'; document.getElementById('hero-fallback').style.display='flex';">
+                        </picture>
                         <div id="hero-fallback" class="hidden w-full h-full items-center justify-center
                                                         bg-gradient-to-br from-brand-500 to-accent-600">
                             <i class="fas fa-user text-6xl sm:text-8xl text-white/80"></i>
