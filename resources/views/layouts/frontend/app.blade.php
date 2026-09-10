@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MR. Aananda — Full Stack Web Developer specializing in Laravel, Vue.js, and modern web technologies. Building scalable, user-centric digital experiences.">
-    <meta name="keywords" content="Full Stack Developer, Laravel, Vue.js, PHP, Web Developer, Bangladesh, Portfolio">
+    <meta name="description" content="MR. Aananda — Software Engineer (Backend-Focused) specializing in Laravel, PHP, REST APIs, and Vue.js. Building scalable enterprise applications.">
+    <meta name="keywords" content="Software Engineer, Backend Developer, Laravel, PHP, Vue.js, MySQL, REST APIs, Bangladesh, Portfolio">
     <meta name="author" content="Mahmudur Rahman Ananda">
-    <meta property="og:title" content="MR. Aananda - Full Stack Web Developer">
-    <meta property="og:description" content="Building exceptional digital experiences with modern technologies.">
+    <meta property="og:title" content="MR. Aananda - Software Engineer (Backend-Focused)">
+    <meta property="og:description" content="Backend-focused Software Engineer skilled in Laravel, PHP, Vue.js, REST APIs, and MySQL.">
     <meta property="og:type" content="website">
-    <title>@yield('title', 'MR. Aananda - Full Stack Web Developer')</title>
+    <title>@yield('title', 'MR. Aananda - Software Engineer (Backend-Focused)')</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ Vite::asset('resources/assets/icons/icon.png') }}">

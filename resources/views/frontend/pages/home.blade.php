@@ -1,6 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title', 'Mr. Aananda - Full Stack Web Developer')
+@section('title', 'MR. Aananda - Software Engineer (Backend-Focused)')
 
 @section('content')
     <!-- Hero Section -->

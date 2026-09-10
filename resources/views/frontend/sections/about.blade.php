@@ -42,21 +42,13 @@
 
                         <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
                             <p>
-                                With over <span class="font-semibold text-brand-600">5 years of experience</span>, I
-                                build
-                                responsive, intuitive, and scalable web applications designed for performance and user
-                                satisfaction.
+                                I am a <span class="font-semibold text-brand-600">Backend-focused Software Engineer</span> with over <span class="font-semibold text-brand-600">5+ years of experience</span> building scalable enterprise applications, business ERPs, and high-performance digital solutions.
                             </p>
                             <p>
-                                I work confidently across frontend and backend using <span
-                                    class="font-medium text-slate-800">Laravel, Vue.js, React, Tailwind, and
-                                    Alpine.js</span>.
-                                My workflow centers on clean architecture, modern best practices, and long-term
-                                maintainability.
+                                Currently serving as <span class="font-semibold text-slate-800">Senior Executive (Software) at Dada Dhaka Ltd</span>, independently delivering complete in-house enterprise suites (QMS, PMS, Voucher, Meeting, Grievance & Challan systems), alongside engineering at <span class="font-medium text-slate-800">Meta Soft</span>.
                             </p>
                             <p>
-                                Outside development, I enjoy exploring new technologies, building side projects,
-                                contributing to the community, and spending time outdoors to recharge.
+                                My expertise centers on <span class="font-medium text-slate-800">PHP, Laravel, RESTful APIs, Vue.js, Pinia, MySQL, and Alpine.js</span>. I focus on clean modular architecture, maintainability, and leveraging AI-assisted tools for rapid debugging and technical problem-solving.
                             </p>
                         </div>
 

@@ -61,16 +61,16 @@
                         </span>
                     </div>
                     <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 mb-4 leading-snug">
-                        AI-Assisted Laravel Development: Using GitHub Copilot & Claude in Real Projects
+                        AI-Assisted Laravel Development: Using Antigravity & Claude in Real Projects
                     </h3>
                     <p class="text-slate-500 text-sm sm:text-base leading-relaxed mb-6">
-                        How I integrate AI tools like GitHub Copilot, Claude, and ChatGPT into my daily Laravel development workflow — from writing complex Eloquent queries to generating migration schemas and debugging production issues 10x faster.
+                        How I integrate cutting-edge AI tools like Antigravity and Claude into my daily Laravel development workflow — from architecting complex business logic and Eloquent queries to generating migration schemas and debugging production issues 10x faster.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-6">
                         <span class="px-2.5 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-lg border border-brand-100">Laravel</span>
                         <span class="px-2.5 py-1 bg-violet-50 text-violet-700 text-xs font-semibold rounded-lg border border-violet-100">AI Tools</span>
-                        <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-lg border border-emerald-100">GitHub Copilot</span>
-                        <span class="px-2.5 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-lg border border-orange-100">Productivity</span>
+                        <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-lg border border-emerald-100">Antigravity</span>
+                        <span class="px-2.5 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-lg border border-orange-100">Claude</span>
                     </div>
                     <div>
                         <a href="#"
@@ -147,8 +147,8 @@
                     'date' => 'May 15, 2025',
                     'read' => '7 min',
                     'title' => '5 AI Tools That Doubled My Development Speed',
-                    'excerpt' => 'A hands-on review of GitHub Copilot, Claude AI, ChatGPT, Cursor, and Pieces — how I use each tool differently and which ones give the best ROI for full-stack PHP developers.',
-                    'tags' => ['AI Tools', 'Productivity', 'GitHub Copilot'],
+                    'excerpt' => 'A hands-on review of Google Antigravity, Claude AI, ChatGPT, Cursor, and Pieces — how I use each tool differently and which ones give the best ROI for full-stack PHP developers.',
+                    'tags' => ['AI Tools', 'Productivity', 'Antigravity'],
                 ],
                 [
                     'gradient' => 'from-amber-500 to-orange-600',

@@ -45,10 +45,10 @@
                         <span class="text-slate-400 text-xs">June 15, 2025</span>
                     </div>
                     <h3 class="text-base sm:text-lg font-bold text-slate-800 mb-2 leading-snug group-hover:text-brand-600 transition-colors duration-300">
-                        AI-Assisted Laravel Development: GitHub Copilot & Claude in Real Projects
+                        AI-Assisted Laravel Development: Antigravity & Claude in Real Projects
                     </h3>
                     <p class="text-slate-500 text-sm leading-relaxed mb-4 flex-1">
-                        How I integrate AI tools into my daily Laravel workflow — writing complex queries, debugging 10x faster, and boosting productivity.
+                        How I integrate cutting-edge AI tools like Antigravity and Claude into my daily Laravel workflow — writing complex queries, debugging 10x faster, and boosting productivity.
                     </p>
                     <a href="{{ route('blogs') }}"
                        class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors duration-200">

@@ -43,14 +43,13 @@
                         <span class="gradient-text">MR. Aananda</span>
                     </h1>
                     <h2 class="text-xl sm:text-2xl text-slate-300 font-medium mt-4">
-                        <span class="typewriter-text">Full Stack Web Developer</span>
+                        <span class="typewriter-text">Software Engineer (Backend-Focused)</span>
                     </h2>
                 </div>
 
                 {{-- Description --}}
                 <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 reveal delay-200" data-delay="200">
-                    I specialize in creating exceptional digital experiences with modern technologies.
-                    Passionate about clean code, user-centric design, and scalable solutions that make a real impact.
+                    Backend-focused Software Engineer skilled in Laravel, PHP, Vue.js, REST APIs, and MySQL, with extensive experience building scalable enterprise applications and business ERPs.
                 </p>
 
                 {{-- Stats --}}
@@ -81,8 +80,9 @@
                         View My Work
                         <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform duration-300"></i>
                     </a>
-                    <a href="https://drive.google.com/uc?export=download&id=1mKY3N4Z9aNtJg9Oq-HT21eafCyQj3_hi"
-                       download="MR_Aananda_CV.pdf"
+                    <a href="https://drive.google.com/file/d/1Gal2qxDo5DG3c1VMsecQCo6ICqAlqt9M/view?usp=sharing"
+                       target="_blank"
+                       rel="noopener noreferrer"
                        class="group inline-flex items-center justify-center gap-2.5 px-6 py-3.5
                               border border-white/20 text-white rounded-xl font-semibold text-sm sm:text-base
                               hover:bg-white/10 hover:border-white/40 backdrop-blur-sm
@@ -127,7 +127,7 @@
                                 rounded-full overflow-hidden
                                 border-4 border-white/20 shadow-2xl animate-float-slow">
                         <img src="{{ Vite::asset('resources/assets/images/hero.png') }}"
-                             alt="MR. Aananda — Full Stack Developer"
+                             alt="MR. Aananda — Software Engineer (Backend-Focused)"
                              class="w-full h-full object-cover"
                              onerror="this.style.display='none'; document.getElementById('hero-fallback').style.display='flex';">
                         <div id="hero-fallback" class="hidden w-full h-full items-center justify-center

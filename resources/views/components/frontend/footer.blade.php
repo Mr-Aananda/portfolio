@@ -26,7 +26,7 @@
                     </div>
                     <div>
                         <span class="block font-bold text-lg gradient-text leading-tight">Mahmudur Rahman Ananda</span>
-                        <span class="text-slate-400 text-xs font-medium">Full Stack Web Developer</span>
+                        <span class="text-slate-400 text-xs font-medium">Software Engineer (Backend-Focused)</span>
                     </div>
                 </div>
                 <p class="text-slate-400 text-sm leading-relaxed max-w-sm mb-5">

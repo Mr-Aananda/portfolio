@@ -23,46 +23,46 @@
             {{-- EasySale --}}
             <div class="reveal delay-100">
                 <x-frontend.project-card
-                    title="EasySale — All-in-One Business ERP"
-                    description="Complete business ERP with purchase, sale, production, stock, expenses, attendance, salary, reports, due management and more."
-                    :technologies="['Laravel', 'VueJS', 'Pinia', 'MySQL', 'Git']"
-                    demoUrl="http://easysale.amwey.site/"
+                    title="EasySale — Smart ERP & POS System"
+                    description="Independent flagship product: modular ERP & high-speed POS billing, multi-tier pricing, inventory valuation (FIFO), IMEI tracking, HRM payroll, and Z-Reports."
+                    :technologies="['PHP', 'Laravel', 'Vue.js', 'Pinia', 'MySQL', 'Spatie']"
+                    demoUrl="https://easysale.e-ddl.com"
                     githubUrl="#"
                     gradient="from-brand-500 to-indigo-600"
                 />
             </div>
 
-            {{-- QMS --}}
+            {{-- QMS (Dada Dhaka Ltd) --}}
             <div class="reveal delay-200">
                 <x-frontend.project-card
                     title="Quality Management System (QMS)"
-                    description="End-to-end quality control platform with inspection workflows, defect tracking, compliance management, and detailed audit reporting."
-                    :technologies="['Laravel', 'VueJS', 'Pinia', 'MySQL', 'Git']"
-                    demoUrl="https://qms.e-ddl.com/"
+                    description="Dada Dhaka Ltd internal enterprise platform: inspection workflows, defect tracking, compliance management, corrective actions, and audit reporting."
+                    :technologies="['PHP', 'Laravel', 'Vue.js', 'Alpine.js', 'MySQL', 'Vite']"
+                    demoUrl="http://qms.e-ddl.com"
                     githubUrl="#"
                     gradient="from-emerald-500 to-teal-600"
                 />
             </div>
 
-            {{-- GMS --}}
+            {{-- GMS (Dada Dhaka Ltd) --}}
             <div class="reveal delay-300">
                 <x-frontend.project-card
                     title="Grievance Management System (GMS)"
-                    description="Structured grievance handling system with complaint submission, escalation workflows, status tracking, and resolution reporting."
-                    :technologies="['Laravel', 'VueJS', 'Pinia', 'MySQL', 'Git']"
-                    demoUrl="https://gms.e-ddl.com/"
+                    description="Dada Dhaka Ltd employee grievance platform: complaint submission, escalation workflows, SLA tracking, status updates, and resolution dashboard."
+                    :technologies="['PHP', 'Laravel', 'Vue.js', 'Alpine.js', 'MySQL', 'Email']"
+                    demoUrl="http://grievance.e-ddl.com"
                     githubUrl="#"
                     gradient="from-purple-500 to-accent-600"
                 />
             </div>
 
-            {{-- Scrap --}}
+            {{-- Scrap Management (Meta Soft) --}}
             <div class="reveal delay-400">
                 <x-frontend.project-card
                     title="Scrap Management System"
-                    description="Comprehensive scrap handling with purchase consolidation, stock management, POS, car module, expense tracking, payroll, and reporting."
-                    :technologies="['Laravel', 'VueJS', 'Pinia', 'MySQL', 'Git']"
-                    demoUrl="http://bakul.amwey.site/"
+                    description="Meta Soft enterprise solution: consolidated daily invoicing for parties, stock & inventory, POS, car tracking module, expense management, and payroll."
+                    :technologies="['PHP', 'Laravel', 'Vue.js', 'Pinia', 'Spatie', 'MySQL']"
+                    demoUrl="https://bakul.amwey.site/login"
                     githubUrl="#"
                     gradient="from-orange-500 to-amber-600"
                 />

@@ -20,7 +20,7 @@
                     <span class="block font-bold text-sm gradient-text leading-tight truncate max-w-[150px] sm:max-w-[200px] lg:max-w-none">
                         Mahmudur Rahman Ananda
                     </span>
-                    <span class="hidden sm:block text-xs text-slate-500 leading-tight font-medium">Full Stack Developer</span>
+                    <span class="hidden sm:block text-xs text-slate-500 leading-tight font-medium">Software Engineer</span>
                 </div>
             </a>
 

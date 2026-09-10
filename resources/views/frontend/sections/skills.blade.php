@@ -36,14 +36,14 @@
                 </div>
 
                 <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-3 sm:p-6 space-y-2">
-                    <x-frontend.skill-item name="Laravel & PHP"                  percentage="95" icon="fab fa-laravel"   color="from-red-500 to-pink-600" />
-                    <x-frontend.skill-item name="Vue.js, JavaScript & Nuxt.js"   percentage="92" icon="fab fa-vuejs"    color="from-emerald-500 to-green-600" />
-                    <x-frontend.skill-item name="Alpine.js, Inertia & React"     percentage="75" icon="fab fa-react"    color="from-sky-500 to-blue-600" />
-                    <x-frontend.skill-item name="Tailwind CSS & Bootstrap"        percentage="90" icon="fas fa-palette"  color="from-teal-500 to-cyan-600" />
-                    <x-frontend.skill-item name="MySQL & MariaDB"                  percentage="90" icon="fas fa-database" color="from-amber-500 to-orange-600" />
-                    <x-frontend.skill-item name="Server & Control Panel Management" percentage="85" icon="fas fa-server"   color="from-slate-500 to-slate-700" />
-                    <x-frontend.skill-item name="AI-Assisted Development"         percentage="82" icon="fas fa-robot"    color="from-violet-500 to-fuchsia-600" />
-                    <x-frontend.skill-item name="Nest.js (Currently Learning)"    percentage="40" icon="fab fa-node-js"  color="from-lime-500 to-green-700" />
+                    <x-frontend.skill-item name="Laravel, PHP & RESTful APIs"        percentage="95" icon="fab fa-laravel"   color="from-red-500 to-pink-600" />
+                    <x-frontend.skill-item name="Vue.js, Pinia, Inertia & Nuxt.js"   percentage="92" icon="fab fa-vuejs"     color="from-emerald-500 to-green-600" />
+                    <x-frontend.skill-item name="Alpine.js, React.js & JavaScript"   percentage="88" icon="fab fa-js"        color="from-yellow-500 to-amber-600" />
+                    <x-frontend.skill-item name="MySQL, SQLite & Eloquent ORM"       percentage="92" icon="fas fa-database"  color="from-amber-500 to-orange-600" />
+                    <x-frontend.skill-item name="Tailwind CSS & Bootstrap"           percentage="90" icon="fas fa-palette"   color="from-teal-500 to-cyan-600" />
+                    <x-frontend.skill-item name="Queues, Caching & Task Scheduling"  percentage="88" icon="fas fa-cogs"      color="from-blue-500 to-indigo-600" />
+                    <x-frontend.skill-item name="AI-Assisted Dev & Problem Solving"  percentage="86" icon="fas fa-robot"     color="from-violet-500 to-fuchsia-600" />
+                    <x-frontend.skill-item name="Git, Vite & Modular Architecture"   percentage="88" icon="fab fa-git-alt"   color="from-orange-500 to-red-600" />
                 </div>
             </div>
 
